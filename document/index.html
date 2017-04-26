@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Định dạng hiển thị utf-8 (unicode) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive on desktop, tablets, phone... -->
+    <title>My first web HTML and CSS</title>
+</head>
+<body>
+    <p><b>Đoạn văn bản:</b></p>
+    <p><b>Tittle:</b></p>
+
+    <h1>Tiêu đề h1</h1>
+    <h2>Tiêu đề h2</h2>
+    <h3>Tiêu đề h3</h3>
+    <h4>Tiêu đề h4</h4>
+    <h5>Tiêu đề h5</h5>
+    <h6>Tiêu đề h6</h6>
+
+    <br>
+    <p><b>Đây là Paragraph:</b></p>
+    <p>Hôm nay là <strong>Thứ 6</strong> ngày <i>21/04/2017</i></p>
+    <p>Thẻ b cũng là <b>chữ đậm</b></p>
+    <p>Lập trình <strike>HTML và CSS</strike></p>
+    <p>Thẻ em là <em>thẻ chữ in nghiêng</em></p>
+    <p>x<sup>2</sup> + x - 1 = 0</p>
+    <p>e<sub>1</sub> + e<sub>2</sub> + ... + e<sub>n</sub> = 100</p>
+    <p>
+        <pre>
+            Thẻ pre nhận cả các dấu spaces        như thế này
+            vả cả dấu enter khi định dạng
+            như thế này
+        </pre>
+    </p>
+    <br><hr>
+
+    <p><b>Một số thẻ khác:</b></p>
+    <p>
+        <blockquote>
+            "Dẫn chứng lời nói"
+            <cite>&mdash; Hoàng Tuấn</cite>
+        </blockquote>
+    </p>
+    <p>Thẻ ghi địa chỉ:
+        <address>Tầng 31, Keangnam Hanoi Landmark 72, Lô E6, Đường Phạm Hùng, Quận Nam Từ Liêm, Hà Nội</address>
+    </p>
+
+    <br><hr>
+    <p><b>Ký tự đặc biệt:</b> ví dụ: &copy; hoặc &#10084;</p>
+    <p>Để biết ký tự đặc biệt bảng mã unicode vào trang web <a href="https://unicode-table.com/en/#control-character" target="_blank"><strong>https://unicode-table.com/en/#control-character</strong></a></p>
+
+    <br><hr>
+    <p><b>Hiển thị hình ảnh</b></p>
+    <img src="img.png" alt="Hiển thị trích dẫn hình ảnh" title="Hiển thị trích dẫn hình ảnh" height="200px">
+
+    <br><hr>
+    <p><b>Tạo đường dẫn liên kết</b></p>
+    <a href="google.com.vn">Đường dẫn đến trang google</a><br>
+    <a href="google.com.vn" target="_blank">Mở trang goolge bằng một tab khác</a>
+
+    <br><br>
+    <p><b>Link liên kết bằng hình ảnh</b></p>
+    <a href="http://dantri.com.vn/">
+        <img src="dantri-logo.jpg" alt="">
+    </a>
+
+    <br><br><hr>
+    <p><b>Tạo đường danh sách</b></p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <br><hr>
+    <p><b>Tạo bảng kiểu list</b></p>
+    <table border="1px">
+        <tr>
+            <th>STT</th>
+            <th>Firstname</th>
+            <th>Lastname</th> 
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <p><b>Tạo bảng</b></p>
+    <table border="1px">
+        <tr>
+            <th>STT</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th>Firstname</th>
+            <td>Jill</td>
+            <td>Eve</td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <th>Lastname</th>
+            <td>Smith</td>
+            <td>Jackson</td>
+            <td>Doe</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>50</td>
+            <td>94</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <p><b>Table - Cells that Span Many Columns</b></p>
+    <table border="1px">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>55577854</td>
+            <td>55577855</td>
+        </tr>
+    </table>
+
+    <p><b>Table - Cells that Span Many Rows</b></p>
+    <table border="1px">
+        <tr>
+            <th>Name:</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone:</th>
+            <td>55577854</td>
+        </tr>
+        <tr>
+            <td>55577855</td>
+        </tr>
+    </table>
+
+    <br><hr>
+    <p><b>Form</b></p>
+    <form action="" method="" accept-charset="" enctype="">
+        username: <input type="text" name="username"><br>
+        password: <input type="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- 
+        action: url to file controller
+        method: GET/POST/PUT/PATCH/DELETE
+        enctype="multipart/form-data" if have file or image
+     -->
+
+    <marquee>This text will scroll from right to left</marquee>
+
+    <marquee direction="up" style="height: 60px;">This text will scroll from bottom to top</marquee>
+
+    <marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+        <marquee behavior="alternate">
+            This text will bounce
+        </marquee>
+    </marquee>
+
+    <div style="height: 100px;"></div>
+    <p style="text-align: center;">&copy;2017 Altplus Vietnam &#10084;</p>
+</body>
+</html>

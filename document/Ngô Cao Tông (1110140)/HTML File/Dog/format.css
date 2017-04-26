@@ -1,0 +1,33 @@
+﻿body {
+background: #ffffcc;
+}
+h1 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 16pt;
+}
+h2 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+h3 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+h4 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+p {
+font-family: arial,helvetica,sans serif;
+font-size: 10pt;
+}li {
+font-family: arial,helvetica,sans serif;
+font-size: 10pt;
+}
+a {
+color: #ff0000;
+}

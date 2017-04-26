@@ -1,0 +1,44 @@
+﻿body {
+background: #ccecd3;
+}
+h1 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 16pt;
+}
+h2 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+h3 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+h4 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+p {
+font-family: arial,helvetica,sans serif;
+font-size: 10pt;
+}li {
+font-family: arial,helvetica,sans serif;
+font-size: 10pt;
+}
+a {
+color: #ff0000;
+}
+#links {
+background: #cccccc;
+float: left;
+width: 200px;
+padding: 10px;
+}
+#content {
+background: #ffffff;
+margin: 0 0 0 220px;
+padding: 20px;
+}

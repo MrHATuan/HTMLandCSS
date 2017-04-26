@@ -1,0 +1,81 @@
+﻿body {
+background: #CCFFFF;
+}
+body table{
+background: #ff6600;
+}
+h1 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 16pt;
+}
+h2 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+h3 { 
+font-family: Verdana, helvetica, sans serif; 
+font-weight: bold; 
+font-size: 12pt; 
+}
+h4 {
+font-family: verdana,helvetica,sans serif;
+font-weight: bold;
+font-size: 14pt;
+}
+p {
+font-family: arial,helvetica,sans serif;
+font-size: 10pt;
+}li {
+font-family: arial,helvetica,sans serif;
+font-size: 10pt;
+}
+a {
+color: #0000FF;
+}
+#links {
+background: #CCFFFF;
+float: left;
+width: 200px;
+margin: 20px 0 0 0;
+padding: 10px;
+}
+#content {
+background: #CCFFFF;
+margin: 0 0 0 220px;
+padding: 0;
+padding: 20px;
+}
+#topnav {  
+background: #FFCCFF ;
+width: 100%;
+}
+#navbar {
+background: #FFFFCC;
+float: left;
+width: 100%;
+padding: 0;
+margin: 0;
+list-style: none;
+}
+# Navbar li { 
+display: inline; 
+}
+#navbar li a {
+background: #FFFFCC;
+float: left;
+padding: 5px 20px;
+}
+#clear {
+clear: both;
+}
+#navbar li a.x {
+background: #0033CC;
+color: #ffffff;
+font-weight: bold;
+}
+#navbar li a.y {
+background: #0033CC;
+color: #ffffff;
+}
