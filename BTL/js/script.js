@@ -14,9 +14,7 @@ var plugins={pointerEvents:isIE<11?"js/pointer-events.min.js":false,
 bootstrapTooltip:$("[data-toggle='tooltip']"),
 bootstrapModalDialog:$('.modal'),
 bootstrapTabs:$(".tabs"),
-rdNavbar:$(".rd-navbar"),
 rdParallax:$(".rd-parallax"),
-// rdGoogleMaps:$(".rd-google-map"),
 rdMailForm:$(".rd-mailform"),
 rdInputLabel:$(".form-label"),
 regula:$("[data-constraints]"),
@@ -31,7 +29,6 @@ selectFilter:$("select"),
 search:$(".rd-search"),
 countDown:$(".countdown"),
 searchResults:$('.rd-search-results'),
-// flickrfeed:$(".flickr"),
 statefulButton:$('.btn-stateful'),
 counter:$(".counter"),
 isotope:$(".isotope"),
@@ -281,60 +278,6 @@ $document.ready(function(){
             },modalItem))
         }
     }
-    // if(plugins.rdGoogleMaps.length){
-    //     var i;
-    //     $.getScript("//maps.google.com/maps/api/js?key=AIzaSyAFeB0kVA6ouyJ_gEvFbMaefLy3cBCyRwo&sensor=false&libraries=geometry,places&v=3.7",function(){
-    //         var head=document.getElementsByTagName('head')[0]
-    //         var insertBefore=head.insertBefore;
-    //         head.insertBefore=function(newElement,referenceElement){
-    //             if(newElement.href&&newElement.href.indexOf('//fonts.googleapis.com/css?family=Roboto')!=-1||newElement.innerHTML.indexOf('gm-style')!=-1){
-    //                 return;
-    //             }
-    //             insertBefore.call(head,newElement,referenceElement);
-    //         };
-    //         for(i=0;i<plugins.rdGoogleMaps.length;i++){
-    //             var $googleMapItem=$(plugins.rdGoogleMaps[i]);
-    //             lazyInit($googleMapItem,$.proxy(function(){
-    //                 var $this=$(this);
-    //                 var styles=$this.attr("data-styles");
-    //                 $this.googleMap({
-    //                     styles:styles?JSON.parse(styles):[],
-    //                     onInit:function(map){
-    //                         var inputAddress=$('#rd-google-map-address');
-    //                         if(inputAddress.length){
-    //                             var input=inputAddress;
-    //                             var geocoder=new google.maps.Geocoder();
-    //                             var marker=new google.maps.Marker({map:map,icon:"images/gmap_marker.png",});
-    //                             var autocomplete=new google.maps.places.Autocomplete(inputAddress[0]);
-    //                             autocomplete.bindTo('bounds',map);
-    //                             inputAddress.attr('placeholder','');
-    //                             inputAddress.on('change',function(){
-    //                                 $("#rd-google-map-address-submit").trigger('click');
-    //                             });
-    //                             inputAddress.on('keydown',function(e){
-    //                                 if(e.keyCode==13){
-    //                                     $("#rd-google-map-address-submit").trigger('click');
-    //                                 }
-    //                             });
-    //                             $("#rd-google-map-address-submit").on('click',function(e){
-    //                                 e.preventDefault();
-    //                                 var address=input.val();
-    //                                 geocoder.geocode({'address':address},function(results,status){
-    //                                     if(status==google.maps.GeocoderStatus.OK){
-    //                                         var latitude=results[0].geometry.location.lat();
-    //                                         var longitude=results[0].geometry.location.lng();
-    //                                         map.setCenter(new google.maps.LatLng(parseFloat(latitude),parseFloat(longitude)));
-    //                                         marker.setPosition(new google.maps.LatLng(parseFloat(latitude),parseFloat(longitude)))
-    //                                     }
-    //                                 });
-    //                             });
-    //                         }
-    //                     }
-    //                 });
-    //             },$googleMapItem));
-    //         }
-    //     });
-    // }
 
     if(plugins.responsiveTabs.length>0){
         var i;for(i=0;i<plugins.responsiveTabs.length;i++){
@@ -517,15 +460,6 @@ $document.ready(function(){
         });
     }
 
-    if(plugins.rdNavbar.length){
-        plugins.rdNavbar.RDNavbar({
-            stickUpClone:(plugins.rdNavbar.attr("data-stick-up-clone"))?plugins.rdNavbar.attr("data-stick-up-clone")==='true':false
-        });
-        if(plugins.rdNavbar.attr("data-body-class")){
-            document.body.className+=' '+ plugins.rdNavbar.attr("data-body-class");
-        }
-    }
-
     if(plugins.viewAnimate.length){
         var i;
         for(i=0;i<plugins.viewAnimate.length;i++){
@@ -538,53 +472,338 @@ $document.ready(function(){
         }
     }
 
-if(plugins.swiper.length){var i;for(i=0;i<plugins.swiper.length;i++){var s=$(plugins.swiper[i]);var pag=s.find(".swiper-pagination"),next=s.find(".swiper-button-next"),prev=s.find(".swiper-button-prev"),bar=s.find(".swiper-scrollbar"),parallax=s.parents('.rd-parallax').length,swiperSlide=s.find(".swiper-slide");for(j=0;j<swiperSlide.length;j++){var $this=$(swiperSlide[j]),url;if(url=$this.attr("data-slide-bg")){$this.css({"background-image":"url("+ url+")","background-size":"cover"})}}
-swiperSlide.end().find("[data-caption-animate]").addClass("not-animated").end().swiper({direction:s.attr('data-direction')?s.attr('data-direction'):"horizontal",effect:s.attr('data-slide-effect')?s.attr('data-slide-effect'):"slide",autoplay:s.attr('data-autoplay')?s.attr('data-autoplay')==="false"?undefined:s.attr('data-autoplay'):5000,speed:s.attr('data-slide-speed')?s.attr('data-slide-speed'):850,keyboardControl:s.attr('data-keyboard')==="true",mousewheelControl:s.attr('data-mousewheel')==="true",mousewheelReleaseOnEdges:s.attr('data-mousewheel-release')==="true",nextButton:next.length?next.get(0):null,prevButton:prev.length?prev.get(0):null,pagination:pag.length?pag.get(0):null,paginationClickable:pag.length?pag.attr("data-clickable")!=="false":false,paginationBulletRender:pag.length?pag.attr("data-index-bullet")==="true"?function(index,className){return'<span class="'+ className+'">'+(index+ 1)+'</span>';}:null:null,scrollbar:bar.length?bar.get(0):null,scrollbarDraggable:bar.length?bar.attr("data-draggable")!=="false":true,scrollbarHide:bar.length?bar.attr("data-draggable")==="false":false,loop:s.attr('data-loop')!=="false",simulateTouch:s.attr('data-simulate-touch')?s.attr('data-simulate-touch')==="true":false,onTransitionStart:function(swiper){toggleSwiperInnerVideos(swiper);},onTransitionEnd:function(swiper){toggleSwiperCaptionAnimation(swiper);},onInit:function(swiper){toggleSwiperInnerVideos(swiper);toggleSwiperCaptionAnimation(swiper);var swiperParalax=s.find(".swiper-parallax");for(var k=0;k<swiperParalax.length;k++){var $this=$(swiperParalax[k]),speed;if(parallax&&!isIEBrows&&!isMobile){if(speed=$this.attr("data-speed")){makeParallax($this,speed,s,false);}}}
-$(window).on('resize',function(){swiper.update(true);})}});$(window).on("resize",function(){var mh=getSwiperHeight(s,"min-height"),h=getSwiperHeight(s,"height");if(h){s.css("height",mh?mh>h?mh:h:h);}}).trigger("resize");}}
-if(plugins.search.length||plugins.searchResults){var handler="bat/rd-search.php";var defaultTemplate='<h5 class="search_title"><a target="_top" href="#{href}" class="search_link">#{title}</a></h5>'+'<p class="match"><em> #{href}</em></p>'+'<p>...#{token}...</p>';var defaultFilter='*.html';if(plugins.search.length){for(i=0;i<plugins.search.length;i++){var searchItem=$(plugins.search[i]),options={element:searchItem,filter:(searchItem.attr('data-search-filter'))?searchItem.attr('data-search-filter'):defaultFilter,template:(searchItem.attr('data-search-template'))?searchItem.attr('data-search-template'):defaultTemplate,live:(searchItem.attr('data-search-live'))?searchItem.attr('data-search-live'):false,liveCount:(searchItem.attr('data-search-live-count'))?parseInt(searchItem.attr('data-search-live')):4,current:0,processed:0,timer:{}};if($('.rd-navbar-search-toggle').length){var toggle=$('.rd-navbar-search-toggle');toggle.on('click',function(){if(!($(this).hasClass('active'))){searchItem.find('input').val('').trigger('propertychange');}});}
-if(options.live){var clearHandler=false;searchItem.find('input').on("keyup input propertychange",$.proxy(function(){this.term=this.element.find('input').val().trim();this.spin=this.element.find('.input-group-addon');clearTimeout(this.timer);if(this.term.length>2){this.timer=setTimeout(liveSearch(this),200);if(clearHandler==false){clearHandler=true;$("body").on("click",function(e){if($(e.toElement).parents('.rd-search').length==0){$('#rd-search-results-live').addClass('cleared').html('');}})}}else if(this.term.length==0){$('#'+ this.live).addClass('cleared').html('');}},options,this));}
-searchItem.submit($.proxy(function(){$('<input />').attr('type','hidden').attr('name',"filter").attr('value',this.filter).appendTo(this.element);return true;},options,this))}}
-if(plugins.searchResults.length){var regExp=/\?.*s=([^&]+)\&filter=([^&]+)/g;var match=regExp.exec(location.search);if(match!=null){$.get(handler,{s:decodeURI(match[1]),dataType:"html",filter:match[2],template:defaultTemplate,live:''},function(data){plugins.searchResults.html(data);})}}}
+    if(plugins.swiper.length){
+        var i;
+        for(i=0;i<plugins.swiper.length;i++){
+            var s=$(plugins.swiper[i]);
+            var pag=s.find(".swiper-pagination");
+            var next=s.find(".swiper-button-next");
+            var prev=s.find(".swiper-button-prev");
+            var bar=s.find(".swiper-scrollbar");
+            var parallax=s.parents('.rd-parallax').length,swiperSlide=s.find(".swiper-slide");
+            for(j=0;j<swiperSlide.length;j++){
+                var $this=$(swiperSlide[j]),url;
+                if(url=$this.attr("data-slide-bg")){
+                    $this.css({"background-image":"url("+ url+")","background-size":"cover"})
+                }
+            }
+            swiperSlide.end().find("[data-caption-animate]").addClass("not-animated").end().swiper({
+                direction:s.attr('data-direction')?s.attr('data-direction'):"horizontal",
+                effect:s.attr('data-slide-effect')?s.attr('data-slide-effect'):"slide",
+                autoplay:s.attr('data-autoplay')?s.attr('data-autoplay')==="false"?undefined:s.attr('data-autoplay'):5000,
+                speed:s.attr('data-slide-speed')?s.attr('data-slide-speed'):850,
+                keyboardControl:s.attr('data-keyboard')==="true",
+                mousewheelControl:s.attr('data-mousewheel')==="true",
+                mousewheelReleaseOnEdges:s.attr('data-mousewheel-release')==="true",
+                nextButton:next.length?next.get(0):null,
+                prevButton:prev.length?prev.get(0):null,
+                pagination:pag.length?pag.get(0):null,
+                paginationClickable:pag.length?pag.attr("data-clickable")!=="false":false,
+                paginationBulletRender:pag.length?pag.attr("data-index-bullet")==="true"?function(index,className){
+                    return'<span class="'+ className+'">'+(index+ 1)+'</span>';
+                }:null:null,
+                scrollbar:bar.length?bar.get(0):null,
+                scrollbarDraggable:bar.length?bar.attr("data-draggable")!=="false":true,
+                scrollbarHide:bar.length?bar.attr("data-draggable")==="false":false,
+                loop:s.attr('data-loop')!=="false",
+                simulateTouch:s.attr('data-simulate-touch')?s.attr('data-simulate-touch')==="true":false,
+                onTransitionStart:function(swiper){
+                    toggleSwiperInnerVideos(swiper);
+                },
+                onTransitionEnd:function(swiper){
+                    toggleSwiperCaptionAnimation(swiper);
+                },
+                onInit:function(swiper){
+                    toggleSwiperInnerVideos(swiper);
+                    toggleSwiperCaptionAnimation(swiper);
+                    var swiperParalax=s.find(".swiper-parallax");
+                    for(var k=0;k<swiperParalax.length;k++){
+                        var $this=$(swiperParalax[k]),speed;
+                        if(parallax&&!isIEBrows&&!isMobile){
+                            if(speed=$this.attr("data-speed")){
+                                makeParallax($this,speed,s,false);
+                            }
+                        }
+                    }
+                    $(window).on('resize',function(){
+                        swiper.update(true);
+                    })
+                }
+            });
+            $(window).on("resize",function(){
+                var mh=getSwiperHeight(s,"min-height");
+                var h=getSwiperHeight(s,"height");
+                if(h){
+                    s.css("height",mh?mh>h?mh:h:h);
+                }
+            }).trigger("resize");
+        }
+    }
 
-    // if(plugins.flickrfeed.length>0){
-    //     var i;
-    //     for(i=0;i<plugins.flickrfeed.length;i++){
-    //         var flickrfeedItem=$(plugins.flickrfeed[i]);
-    //         flickrfeedItem.RDFlickr({
-    //             callback:function(){
-    //                 var items=flickrfeedItem.find("[data-photo-swipe-item]");
-    //                 if(items.length){
-    //                     for(var j=0;j<items.length;j++){
-    //                         var image=new Image();
-    //                         image.setAttribute('data-index',j);
-    //                         image.onload=function(){
-    //                             items[this.getAttribute('data-index')].setAttribute('data-size',this.naturalWidth+'x'+ this.naturalHeight);
-    //                         };
-    //                         image.src=items[j].getAttribute('href');
-    //                     }
-    //                 }
-    //             }
-    //         });
-    //     }
-    // }
+    if(plugins.search.length||plugins.searchResults){
+        var handler="bat/rd-search.php";
+        var defaultTemplate='<h5 class="search_title"><a target="_top" href="#{href}" class="search_link">#{title}</a></h5>'+'<p class="match"><em> #{href}</em></p>'+'<p>...#{token}...</p>';
+        var defaultFilter='*.html';
+        if(plugins.search.length){
+            for(i=0;i<plugins.search.length;i++){
+                var searchItem=$(plugins.search[i]);
+                var options={
+                    element:searchItem,
+                    filter:(searchItem.attr('data-search-filter'))?searchItem.attr('data-search-filter'):defaultFilter,
+                    template:(searchItem.attr('data-search-template'))?searchItem.attr('data-search-template'):defaultTemplate,
+                    live:(searchItem.attr('data-search-live'))?searchItem.attr('data-search-live'):false,
+                    liveCount:(searchItem.attr('data-search-live-count'))?parseInt(searchItem.attr('data-search-live')):4,
+                    current:0,
+                    processed:0,
+                    timer:{}
+                };
+                if($('.rd-navbar-search-toggle').length){
+                    var toggle=$('.rd-navbar-search-toggle');
+                    toggle.on('click',function(){
+                        if(!($(this).hasClass('active'))){
+                            searchItem.find('input').val('').trigger('propertychange');
+                        }
+                    });
+                }
+                if(options.live){
+                    var clearHandler=false;
+                    searchItem.find('input').on("keyup input propertychange",$.proxy(function(){
+                        this.term=this.element.find('input').val().trim();
+                        this.spin=this.element.find('.input-group-addon');
+                        clearTimeout(this.timer);
+                        if(this.term.length>2){
+                            this.timer=setTimeout(liveSearch(this),200);
+                            if(clearHandler==false){
+                                clearHandler=true;
+                                $("body").on("click",function(e){
+                                    if($(e.toElement).parents('.rd-search').length==0){
+                                        $('#rd-search-results-live').addClass('cleared').html('');
+                                    }
+                                })
+                            }
+                        }else if(this.term.length==0){
+                            $('#'+ this.live).addClass('cleared').html('');
+                        }
+                    },options,this));
+                }
+                searchItem.submit($.proxy(function(){
+                    $('<input />').attr('type','hidden').attr('name',"filter").attr('value',this.filter).appendTo(this.element);
+                    return true;
+                },options,this))
+            }
+        }
+        if(plugins.searchResults.length){
+            var regExp=/\?.*s=([^&]+)\&filter=([^&]+)/g;
+            var match=regExp.exec(location.search);
+            if(match!=null){
+                $.get(handler,{
+                    s:decodeURI(match[1]),
+                    dataType:"html",
+                    filter:match[2],
+                    template:defaultTemplate,
+                    live:''
+                },function(data){
+                    plugins.searchResults.html(data);
+                })
+            }
+        }
+    }
 
-if(plugins.owl.length){var i;for(i=0;i<plugins.owl.length;i++){var c=$(plugins.owl[i]),responsive={};var aliaces=["-","-xs-","-sm-","-md-","-lg-"],values=[0,480,768,992,1200],j,k;for(j=0;j<values.length;j++){responsive[values[j]]={};for(k=j;k>=-1;k--){if(!responsive[values[j]]["items"]&&c.attr("data"+ aliaces[k]+"items")){responsive[values[j]]["items"]=k<0?1:parseInt(c.attr("data"+ aliaces[k]+"items"));}
-if(!responsive[values[j]]["stagePadding"]&&responsive[values[j]]["stagePadding"]!==0&&c.attr("data"+ aliaces[k]+"stage-padding")){responsive[values[j]]["stagePadding"]=k<0?0:parseInt(c.attr("data"+ aliaces[k]+"stage-padding"));}
-if(!responsive[values[j]]["margin"]&&responsive[values[j]]["margin"]!==0&&c.attr("data"+ aliaces[k]+"margin")){responsive[values[j]]["margin"]=k<0?30:parseInt(c.attr("data"+ aliaces[k]+"margin"));}}}
-c.owlCarousel({autoplay:c.attr("data-autoplay")==="true",loop:c.attr("data-loop")!=="false",items:1,dotsContainer:c.attr("data-pagination-class")||false,navContainer:c.attr("data-navigation-class")||false,mouseDrag:"false",nav:c.attr("data-nav")==="true",dots:c.attr("data-dots")==="true",dotsEach:c.attr("data-dots-each")?parseInt(c.attr("data-dots-each")):false,animateIn:c.attr('data-animation-in')?c.attr('data-animation-in'):'fadeIn',animateOut:c.attr('data-animation-out')?c.attr('data-animation-out'):'fadeOut',responsive:responsive,navText:[]});}}
-if(plugins.isotope.length){var i,isogroup=[];for(i=0;i<plugins.isotope.length;i++){var isotopeItem=plugins.isotope[i],iso=new Isotope(isotopeItem,{itemSelector:'.isotope-item',layoutMode:isotopeItem.getAttribute('data-isotope-layout')?isotopeItem.getAttribute('data-isotope-layout'):'masonry',filter:'*'});isogroup.push(iso);}
-$(window).on('load',function(){setTimeout(function(){var i;for(i=0;i<isogroup.length;i++){isogroup[i].element.className+=" isotope--loaded";isogroup[i].layout();}},600);});var resizeTimout;$("[data-isotope-filter]").on("click",function(e){e.preventDefault();var filter=$(this);clearTimeout(resizeTimout);filter.parents(".isotope-filters").find('.active').removeClass("active");filter.addClass("active");var iso=$('.isotope[data-isotope-group="'+ this.getAttribute("data-isotope-group")+'"]');iso.isotope({itemSelector:'.isotope-item',layoutMode:iso.attr('data-isotope-layout')?iso.attr('data-isotope-layout'):'masonry',filter:this.getAttribute("data-isotope-filter")=='*'?'*':'[data-filter*="'+ this.getAttribute("data-isotope-filter")+'"]'});}).eq(0).trigger("click")}
-if(isDesktop&&$html.hasClass("wow-animation")&&$(".wow").length){new WOW().init();}
-if(plugins.bootstrapTabs.length){var i;for(i=0;i<plugins.bootstrapTabs.length;i++){var bootstrapTabsItem=$(plugins.bootstrapTabs[i]);bootstrapTabsItem.on("click","a",function(event){event.preventDefault();$(this).tab('show');});}}
-if(plugins.rdInputLabel.length){plugins.rdInputLabel.RDInputLabel();}
-if(plugins.regula.length){attachFormValidator(plugins.regula);}
-if(plugins.rdMailForm.length){var i,j,k,msg={'MF000':'Successfully sent!','MF001':'Recipients are not set!','MF002':'Form will not work locally!','MF003':'Please, define email field in your form!','MF004':'Please, define type of your form!','MF254':'Something went wrong with PHPMailer!','MF255':'Aw, snap! Something went wrong.'};for(i=0;i<plugins.rdMailForm.length;i++){var $form=$(plugins.rdMailForm[i]);$form.attr('novalidate','novalidate').ajaxForm({data:{"form-type":$form.attr("data-form-type")||"contact","counter":i},beforeSubmit:function(){var form=$(plugins.rdMailForm[this.extraData.counter]);var inputs=form.find("[data-constraints]");if(isValidated(inputs)){var output=$("#"+ form.attr("data-form-output"));if(output.hasClass("snackbars")){output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');output.addClass("active");}}else{return false;}},error:function(result){var output=$("#"+ $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output"));output.text(msg[result]);},success:function(result){var form=$(plugins.rdMailForm[this.extraData.counter]),output=$("#"+ form.attr("data-form-output")),$select=form.find('select');if($select.length){for(j=0;j<$select.length;j++){var $selectitem=$($select[j]);$selectitem.select2('val',null);}}
-form.addClass('success');result=result.length==5?result:'MF255';output.text(msg[result]);if(result==="MF000"){if(output.hasClass("snackbars")){output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>'+ msg[result]+'</span></p>');}
-output.addClass("success active");}else{if(output.hasClass("snackbars")){output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>'+ msg[result]+'</span></p>');}
-output.addClass("error active");}
-form.clearForm();form.find('input, textarea').blur();setTimeout(function(){output.removeClass("active error success");form.removeClass('success');},5000);}});}}
-if(plugins.photoSwipeGallery.length){$document.delegate("[data-photo-swipe-item]","click",function(event){event.preventDefault();var $el=$(this),$galleryItems=$el.parents("[data-photo-swipe-gallery]").find("a[data-photo-swipe-item]"),pswpElement=document.querySelectorAll('.pswp')[0],encounteredItems={},pswpItems=[],options,pswpIndex=0,pswp;if($galleryItems.length==0){$galleryItems=$el;}
-$galleryItems.each(function(){var $item=$(this),src=$item.attr('href'),size=$item.attr('data-size').split('x'),pswdItem;if($item.is(':visible')){if(!encounteredItems[src]){pswdItem={src:src,w:parseInt(size[0],10),h:parseInt(size[1],10),el:$item};encounteredItems[src]={item:pswdItem,index:pswpIndex};pswpItems.push(pswdItem);pswpIndex++;}}});options={index:encounteredItems[$el.attr('href')].index,getThumbBoundsFn:function(index){var $el=pswpItems[index].el,offset=$el.offset();return{x:offset.left,y:offset.top,w:$el.width()};}};pswp=new PhotoSwipe(pswpElement,PhotoSwipeUI_Default,pswpItems,options);pswp.init();});}
+    if(plugins.owl.length){
+        var i;
+        for(i=0;i<plugins.owl.length;i++){
+            var c=$(plugins.owl[i]),responsive={};
+            var aliaces=["-","-xs-","-sm-","-md-","-lg-"];
+            var values=[0,480,768,992,1200],j,k;
+            for(j=0;j<values.length;j++){
+                responsive[values[j]]={};
+                for(k=j;k>=-1;k--){
+                    if(!responsive[values[j]]["items"]&&c.attr("data"+ aliaces[k]+"items")){
+                        responsive[values[j]]["items"]=k<0?1:parseInt(c.attr("data"+ aliaces[k]+"items"));
+                    }
+                    if(!responsive[values[j]]["stagePadding"]&&responsive[values[j]]["stagePadding"]!==0&&c.attr("data"+ aliaces[k]+"stage-padding")){
+                        responsive[values[j]]["stagePadding"]=k<0?0:parseInt(c.attr("data"+ aliaces[k]+"stage-padding"));
+                    }
+                    if(!responsive[values[j]]["margin"]&&responsive[values[j]]["margin"]!==0&&c.attr("data"+ aliaces[k]+"margin")){
+                        responsive[values[j]]["margin"]=k<0?30:parseInt(c.attr("data"+ aliaces[k]+"margin"));
+                    }
+                }
+            }
+            c.owlCarousel({
+                autoplay:c.attr("data-autoplay")==="true",
+                loop:c.attr("data-loop")!=="false",
+                items:1,
+                dotsContainer:c.attr("data-pagination-class")||false,navContainer:c.attr("data-navigation-class")||false,
+                mouseDrag:"false",nav:c.attr("data-nav")==="true",
+                dots:c.attr("data-dots")==="true",
+                dotsEach:c.attr("data-dots-each")?parseInt(c.attr("data-dots-each")):false,
+                animateIn:c.attr('data-animation-in')?c.attr('data-animation-in'):'fadeIn',
+                animateOut:c.attr('data-animation-out')?c.attr('data-animation-out'):'fadeOut',
+                responsive:responsive,navText:[]
+            });
+        }
+    }
+
+    if(plugins.isotope.length){
+        var i,isogroup=[];
+        for(i=0;i<plugins.isotope.length;i++){
+            var isotopeItem=plugins.isotope[i];
+            var iso=new Isotope(isotopeItem,{
+                itemSelector:'.isotope-item',
+                layoutMode:isotopeItem.getAttribute('data-isotope-layout')?isotopeItem.getAttribute('data-isotope-layout'):'masonry',
+                filter:'*'
+            });
+            isogroup.push(iso);
+        }
+        $(window).on('load',function(){
+            setTimeout(function(){
+                var i;
+                for(i=0;i<isogroup.length;i++){
+                    isogroup[i].element.className+=" isotope--loaded";
+                    isogroup[i].layout();
+                }
+            },600);
+        });
+        var resizeTimout;
+        $("[data-isotope-filter]").on("click",function(e){
+            e.preventDefault();
+            var filter=$(this);
+            clearTimeout(resizeTimout);
+            filter.parents(".isotope-filters").find('.active').removeClass("active");
+            filter.addClass("active");
+            var iso=$('.isotope[data-isotope-group="'+ this.getAttribute("data-isotope-group")+'"]');
+            iso.isotope({
+                itemSelector:'.isotope-item',
+                layoutMode:iso.attr('data-isotope-layout')?iso.attr('data-isotope-layout'):'masonry',
+                filter:this.getAttribute("data-isotope-filter")=='*'?'*':'[data-filter*="'+ this.getAttribute("data-isotope-filter")+'"]'
+            });
+        }).eq(0).trigger("click")
+    }
+
+    if(isDesktop&&$html.hasClass("wow-animation")&&$(".wow").length){
+        new WOW().init();
+    }
+
+    if(plugins.bootstrapTabs.length){
+        var i;
+        for(i=0;i<plugins.bootstrapTabs.length;i++){
+            var bootstrapTabsItem=$(plugins.bootstrapTabs[i]);
+            bootstrapTabsItem.on("click","a",function(event){
+                event.preventDefault();
+                $(this).tab('show');
+            });
+        }
+    }
+
+    if(plugins.rdInputLabel.length){
+        plugins.rdInputLabel.RDInputLabel();
+    }
+
+    if(plugins.regula.length){
+        attachFormValidator(plugins.regula);
+    }
+
+    if(plugins.rdMailForm.length){
+        var i,j,k,msg={'MF000':'Successfully sent!','MF001':'Recipients are not set!','MF002':'Form will not work locally!','MF003':'Please, define email field in your form!','MF004':'Please, define type of your form!','MF254':'Something went wrong with PHPMailer!','MF255':'Aw, snap! Something went wrong.'};
+        for(i=0;i<plugins.rdMailForm.length;i++){
+            var $form=$(plugins.rdMailForm[i]);
+            $form.attr('novalidate','novalidate').ajaxForm({
+                data:{"form-type":$form.attr("data-form-type")||"contact","counter":i},
+                beforeSubmit:function(){
+                    var form=$(plugins.rdMailForm[this.extraData.counter]);
+                    var inputs=form.find("[data-constraints]");
+                    if(isValidated(inputs)){
+                        var output=$("#"+ form.attr("data-form-output"));
+                        if(output.hasClass("snackbars")){
+                            output.html('<p><span class="icon text-middle fa fa-circle-o-notch fa-spin icon-xxs"></span><span>Sending</span></p>');
+                            output.addClass("active");
+                        }
+                    }else{
+                        return false;
+                    }
+                },error:function(result){
+                    var output=$("#"+ $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output"));
+                    output.text(msg[result]);
+                },success:function(result){
+                    var form=$(plugins.rdMailForm[this.extraData.counter]);
+                    var output=$("#"+ form.attr("data-form-output"));
+                    var $select=form.find('select');
+                    if($select.length){
+                        for(j=0;j<$select.length;j++){
+                            var $selectitem=$($select[j]);
+                            $selectitem.select2('val',null);
+                        }
+                    }
+                    form.addClass('success');
+                    result=result.length==5?result:'MF255';
+                    output.text(msg[result]);
+                    if(result==="MF000"){
+                        if(output.hasClass("snackbars")){
+                            output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>'+ msg[result]+'</span></p>');
+                        }
+                        output.addClass("success active");
+                    }else{
+                        if(output.hasClass("snackbars")){
+                            output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>'+ msg[result]+'</span></p>');
+                        }
+                        output.addClass("error active");
+                    }
+                    form.clearForm();
+                    form.find('input, textarea').blur();
+                    setTimeout(function(){
+                        output.removeClass("active error success");
+                        form.removeClass('success');
+                    },5000);
+                }
+            });
+        }
+    }
+
+    if(plugins.photoSwipeGallery.length){
+        $document.delegate("[data-photo-swipe-item]","click",function(event){
+            event.preventDefault();
+            var $el=$(this);
+            var $galleryItems=$el.parents("[data-photo-swipe-gallery]").find("a[data-photo-swipe-item]");
+            var pswpElement=document.querySelectorAll('.pswp')[0];
+            var encounteredItems={},pswpItems=[];
+            var options,pswpIndex=0;
+            var pswp;
+            if($galleryItems.length==0){
+                $galleryItems=$el;
+            }
+            $galleryItems.each(function(){
+                var $item=$(this);
+                var src=$item.attr('href');
+                var size=$item.attr('data-size').split('x');
+                var pswdItem;
+                if($item.is(':visible')){
+                    if(!encounteredItems[src]){
+                        pswdItem={
+                            src:src,
+                            w:parseInt(size[0],10),
+                            h:parseInt(size[1],10),el:$item
+                        };
+                        encounteredItems[src]={
+                            item:pswdItem,
+                            index:pswpIndex
+                        };
+                        pswpItems.push(pswdItem);
+                        pswpIndex++;
+                    }
+                }
+            });
+            options={
+                index:encounteredItems[$el.attr('href')].index,
+                getThumbBoundsFn:function(index){
+                    var $el=pswpItems[index].el;
+                    var offset=$el.offset();
+                    return{x:offset.left,y:offset.top,w:$el.width()};
+                }
+            };
+            pswp=new PhotoSwipe(pswpElement,PhotoSwipeUI_Default,pswpItems,options);
+            pswp.init();
+        });
+    }
 
     if(plugins.customToggle.length){
         var i;
@@ -605,5 +824,26 @@ $galleryItems.each(function(){var $item=$(this),src=$item.attr('href'),size=$ite
         }
     }
 
-if(plugins.rdParallax.length){var i;$.RDParallax();if(!isIE&&!isMobile){$(window).on("scroll",function(){for(i=0;i<plugins.rdParallax.length;i++){var parallax=$(plugins.rdParallax[i]);if(isScrolledIntoView(parallax)){parallax.find(".rd-parallax-inner").css("position","fixed");}else{parallax.find(".rd-parallax-inner").css("position","absolute");}}});}
-$("a[href='#'], a[href^='#']").on("click",function(event){setTimeout(function(){$(window).trigger("resize");},300);});}});
+    if(plugins.rdParallax.length){
+        var i;
+        $.RDParallax();
+        if(!isIE&&!isMobile){
+            $(window).on("scroll",function(){
+                for(i=0;i<plugins.rdParallax.length;i++){
+                    var parallax=$(plugins.rdParallax[i]);
+                    if(isScrolledIntoView(parallax)){
+                        parallax.find(".rd-parallax-inner").css("position","fixed");
+                    }else{
+                        parallax.find(".rd-parallax-inner").css("position","absolute");
+                    }
+                }
+            });
+        }
+        $("a[href='#'], a[href^='#']").on("click",function(event){
+            setTimeout(function(){
+                $(window).trigger("resize");
+            },300);
+        });
+    }
+
+});

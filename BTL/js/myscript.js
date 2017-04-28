@@ -17,7 +17,7 @@ $( document ).ready( function() {
         $("#menu").removeClass('active');
     });
     $(window).scroll(function(event){
-        if($("#icon_menu").hasClass('active')){
+        if($("#icon_menu").hasClass('active')){ 
             $("#icon_menu").removeClass('active');
             $('#page #ovelay-bg').css('display','none');
             $("#menu").removeClass('active');
