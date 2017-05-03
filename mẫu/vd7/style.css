@@ -60,6 +60,7 @@ p {
 .hotel-description {
   display: inline-block;
   width: 70%;
+  margin-left: 15px;
 }
 
 .book {
@@ -77,6 +78,8 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  width: 150px;
+  margin-left: 160px;
 }
 
 ul {
