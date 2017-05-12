@@ -75,7 +75,7 @@
                                     <li><a href="#">Training</a></li>
                                     <li><a href="#">Membership</a></li>
                                     <li>
-                                        <a href="events.html">Events</a>
+                                        <a href="#">Events</a>
                                         <span class="rd-navbar-submenu-toggle fa fa-angle-down"></span>
                                         <!-- RD Navbar Dropdown-->
                                         <ul class="rd-navbar-dropdown">
@@ -169,74 +169,49 @@
             <section>
                 <!-- Swiper-->
                 <div class="swiper-outer">
-                    <div data-simulate-touch="false" data-dots="true" data-autoplay="false" class="swiper-container swiper-slider">
+                    <div class="swiper-container swiper-slider">
                         <div class="swiper-wrapper">
-                            <div data-slide-bg="images/index-01-1920x660.jpg" class="swiper-slide">
-                                <div data-caption-animate="fadeInUp" class="swiper-slide-caption">
+                            <div class="swiper-slide" style="background-image: url(images/index-01-1920x660.jpg); background-size: cover;">
+                                <div class="swiper-slide-caption">
                                     <div class="shell text-md-left">
                                         <div class="range range-xs-center range-md-left">
                                             <div class="cell-md-7 cell-lg-8">
-                                                <h1>Bring Your <br class="veil-xs">Friends</h1>
+                                                <h1>Bring Your <br class="hide-xs">Friends</h1>
                                                 <p>Tennis is even more beneficial and entertaining when playing with friends, so feel<br class="visible-lg-inline">free to invite your company to Tennis Club today!</p><a href="about.html" class="btn btn-white btn-sm">Learn More</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div data-slide-bg="images/index-02-1920x660.jpg" class="swiper-slide">
-                                <div data-caption-animate="fadeInUp" class="swiper-slide-caption">
-                                    <div class="shell text-md-left">
-                                        <div class="range range-xs-center range-md-left">
-                                            <div class="cell-md-7 cell-lg-8">
-                                                <h1>pick your <br class="veil-xs">equipment</h1>
-                                                <p>Even if you don’t own any tennis equipment or apparel, at Tennis Club you can<br class="visible-lg-inline"> buy or rent everything you need for your game at affordable price.</p><a href="about.html" class="btn btn-white btn-sm">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-slide-bg="images/index-03-1920x660.jpg" class="swiper-slide">
-                                <div data-caption-animate="fadeInUp" class="swiper-slide-caption">
-                                    <div class="shell text-md-left">
-                                        <div class="range range-xs-center range-md-left">
-                                            <div class="cell-md-7 cell-lg-8">
-                                                <h1>play tennis <br class="veil-xs">with us</h1>
-                                                <p>Playing tennis at Tennis Club has a lot of benefits, one of which is unprecedented<br class="visible-lg-inline"> action! There’s no way to experience such a range of emotions in other games.</p><a href="about.html" class="btn btn-white btn-sm">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
-                        <!-- Swiper Navigation-->
-                        <div class="swiper-button-prev material-design-left216"></div>
-                        <div class="swiper-button-next material-design-right237"></div>
                         <!-- Swiper Pagination-->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination">
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                        </div>
                     </div>
                     <div class="swiper-on-slider">
                         <div class="well-variant-2">
                             <h2 class="text-md-left">Fill in the Form</h2>
                             <!-- RD Mailform-->
-                            <form method="post" action="bat/rd-mailform.php" class="offset-top-26 range rd-mailform">
-                                <div class="cell-xs-12 cell-sm-6 cell-md-12 offset-top-20 offset-md-top-0">
+                            <form class="offset-top-26 range rd-mailform">
+                                <div class="cell-xs-12 cell-sm-6 cell-md-12 offset-top-20">
                                     <div class="form-group">
-                                        <label for="contact-name" class="form-label">Your name</label>
-                                        <input id="contact-name" type="text" name="name" data-constraints="@Required" class="form-control form-control-gray-base">
+                                        <input id="contact-name" type="text" name="name" class="form-control form-control-gray-base" placeholder="Your name">
                                     </div>
                                 </div>
-                                <div class="cell-xs-12 cell-sm-6 cell-md-12 offset-top-20 offset-md-top-0">
+                                <div class="cell-xs-12 cell-sm-6 cell-md-12 offset-top-20">
                                     <div class="form-group">
-                                        <label for="contact-phone" class="form-label">Phone</label>
-                                        <input id="contact-phone" type="text" name="phone" data-constraints="@Required @Integer" class="form-control form-control-gray-base">
+                                        <input id="contact-phone" type="text" name="phone" class="form-control form-control-gray-base" placeholder="Phone">
                                     </div>
                                 </div>
-                                <div class="cell-md-12 offset-top-20 offset-md-top-0">
+                                <div class="cell-md-12 offset-top-20">
                                     <div class="range">
                                         <div class="cell-xs-12 cell-sm-6 offset-top-0">
-                                            <!--Select 2-->
                                             <div class="form-group">
-                                                <select data-placeholder="Players" data-minimum-results-for-search="Infinity" data-constraints="@Required" class="form-control form-control-gray-base select-filter">
+                                                <select class="form-control form-control-gray-base select-filter">
                                                     <option>Players</option>
                                                     <option value="2">2</option>
                                                     <option value="3">3</option>
@@ -245,18 +220,17 @@
                                                     <option value="6">6</option>
                                                     <option value="7">7</option>
                                                 </select>
+                                                <i class="fa fa-angle-down select-down"></i>
                                             </div>
                                         </div>
-                                        <div class="cell-xs-12 cell-sm-6 offset-top-20 offset-sm-top-0">
-                                            <!--Select 2-->
+                                        <div class="cell-xs-12 cell-sm-6 offset-sm-top-0">
                                             <div class="form-group">
-                                                <label for="date" class="form-label">Date</label>
-                                                <input id="date" data-time-picker="date" type="text" name="date" data-constraints="@Required" class="form-control form-control-gray-base">
+                                                <input id="date" type="text" name="date" class="form-control form-control-gray-base" placeholder="Date">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="cell-md-12 offset-top-20 offset-md-top-0">
+                                <div class="cell-md-12 offset-top-20">
                                     <button class="btn btn-block btn-primary btn-sm">Book a court</button>
                                 </div>
                             </form>
@@ -265,7 +239,7 @@
                 </div>
             </section>
 
-            <section class="section-80 section-md-110">
+            <section class="section-80 section-md-110 about1" id="section2">
                 <div class="shell">
                     <div class="range text-md-left">
                         <div class="cell-md-4"><img src="images/icon-06-62x60.png" alt="" width="62" height="60" class="reveal-inline-block"/>
@@ -285,38 +259,33 @@
             </section>
 
             <!-- RD Parallax-->
-            <section class="rd-parallax">
-                <div data-speed="0.3" data-type="media" data-url="images/index-04-1920x273.jpg.jpg" class="rd-parallax-layer"></div>
-                <div data-speed="0" data-type="html" class="rd-parallax-layer">
+            <section class="rd-parallax about2" id="section3" style="background: url(images/index-04-1920x273.jpg.jpg) center center / cover;">
+                <div class="rd-parallax-layer">
                     <div class="section-lg-100 section-80 context-dark">
                         <div class="shell">
                             <div class="range range-xs-center">
                                 <div class="cell-md-3 cell-xs-6 cell-sm-5">
-                                    <!-- CountTo-->
                                     <div class="counter-wrapper">
-                                        <div data-from="0" data-to="20" class="counter"></div>
-                                        <div class="counter-title">Years<br class="veil reveal-sm-block">of Experience</div>
+                                        <div class="counter">20</div>
+                                        <div class="counter-title">Years<br class="hidden reveal-sm-block">of Experience</div>
                                     </div>
                                 </div>
                                 <div class="cell-md-3 cell-xs-6 cell-sm-5 offset-top-42 offset-xs-top-0">
-                                    <!-- CountTo-->
                                     <div class="counter-wrapper">
-                                        <div data-from="0" data-to="7" class="counter"></div>
-                                        <div class="counter-title">annual<br class="veil reveal-sm-block">competitions</div>
+                                        <div class="counter">7</div>
+                                        <div class="counter-title">annual<br class="hidden reveal-sm-block">competitions</div>
                                     </div>
                                 </div>
                                 <div class="cell-md-3 cell-xs-6 cell-sm-5 offset-top-42 offset-md-top-0">
-                                    <!-- CountTo-->
                                     <div class="counter-wrapper">
-                                        <div data-from="0" data-to="26" class="counter"></div>
-                                        <div class="counter-title">Qualified<br class="veil reveal-sm-block">instructors</div>
+                                        <div class="counter">26</div>
+                                        <div class="counter-title">Qualified<br class="hidden reveal-sm-block">instructors</div>
                                     </div>
                                 </div>
                                 <div class="cell-md-3 cell-xs-6 cell-sm-5 offset-top-42 offset-md-top-0">
-                                    <!-- CountTo-->
                                     <div class="counter-wrapper">
-                                        <div data-from="0" data-to="10" class="counter"></div>
-                                        <div class="counter-title">tennis<br class="veil reveal-sm-block">courts</div>
+                                        <div class="counter">10</div>
+                                        <div class="counter-title">tennis<br class="hidden reveal-sm-block">courts</div>
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +294,7 @@
                 </div>
             </section>
 
-            <section class="section-80 section-md-110">
+            <section class="section-80 section-md-110" id="section4">
                 <div class="shell">
                     <div class="range text-md-left">
                         <div class="cell-md-6 cell-lg-preffix-1 cell-md-push-1">
@@ -349,7 +318,7 @@
                 </div>
             </section>
 
-            <section class="bg-gray-light section-top-60 section-md-top-0">
+            <section class="bg-gray-light section-top-60 section-md-top-0" id="section5">
                 <div class="shell">
                     <div class="range text-md-left">
                         <div class="cell-md-6 img-fullwidth-wrapper">
@@ -363,7 +332,7 @@
                 </div>
             </section>
 
-            <section class="bg-gray-light">
+            <section class="bg-gray-light" id="section6">
                 <div class="shell">
                     <div class="range text-md-left">
                         <div class="cell-lg-preffix-1 cell-md-push-1 cell-md-6 img-fullwidth-wrapper">
@@ -377,7 +346,7 @@
                 </div>
             </section>
 
-            <section class="bg-gray-light">
+            <section class="bg-gray-light" id="setion7">
                 <div class="shell">
                     <div class="range text-md-left">
                         <div class="cell-md-6 img-fullwidth-wrapper">
@@ -391,98 +360,113 @@
                 </div>
             </section>
 
-            <section class="section-80 section-md-110">
+            <section class="section-80 section-md-110" id="section8">
                 <div class="shell">
                     <h2>Coaches and Instructors</h2>
                     <hr class="divider divider-60 divider-primary offset-top-32">
-                    <!-- Owl Carousel-->
-                    <div class="row owl-dots-md offset-top-60 text-xs-left">
-                        <div class="item col-md-4">
-                            <img src="images/index-09-341x340.jpg" alt="" width="341" height="340" class="img-responsive reveal-inline-block"/>
-                            <h3 class="text-primary text-bold offset-top-22">Scott Jenkins</h3>
-                            <h6 class="text-dark offset-top-5">head coach</h6>
-                            <p class="divider-text divider-text-primary offset-top-22">Scott Jenkins has been the Head<br>Professional at Tennis Club since 2002.</p><a href="#" class="btn btn-default btn-sm offset-top-12 offset-sm-top-22">get in touch</a>
-                        </div>
-                        <div class="item col-md-4">
-                            <img src="images/index-10-341x340.jpg" alt="" width="341" height="340" class="img-responsive reveal-inline-block"/>
-                            <h3 class="text-primary text-bold offset-top-22">Jessica Priston</h3>
-                            <h6 class="text-dark offset-top-5">tennis instructor</h6>
-                            <p class="divider-text divider-text-primary offset-top-22">Jessica was a member of the University of California tennis team in the 1990s.</p><a href="#" class="btn btn-default btn-sm offset-top-12 offset-sm-top-22">get in touch</a>
-                        </div>
-                        <div class="item col-md-4">
-                            <img src="images/index-11-341x340.jpg" alt="" width="341" height="340" class="img-responsive reveal-inline-block"/>
-                            <h3 class="text-primary text-bold offset-top-22">Lawrence Larson</h3>
-                            <h6 class="text-dark offset-top-5">coach</h6>
-                            <p class="divider-text divider-text-primary offset-top-22">Lawrence Larson has been running the Tennis Academy since 2010.</p><a href="#" class="btn btn-default btn-sm offset-top-12 offset-sm-top-22">get in touch</a>
+
+                    <div class="shell">
+                        <div class="range offset-top-60 text-md-left">
+                            <div class="item cell-md-4">
+                                <img src="images/index-09-341x340.jpg" alt="" width="341" height="340" class="img-responsive reveal-inline-block"/>
+                                <h3 class="text-primary text-bold offset-top-22">Scott Jenkins</h3>
+                                <h6 class="text-dark offset-top-5">head coach</h6>
+                                <p class="divider-text divider-text-primary offset-top-22">Scott Jenkins has been the Head<br>Professional at Tennis Club since 2002.</p><a href="#" class="btn btn-default btn-sm offset-top-12 offset-sm-top-22">get in touch</a>
+                            </div>
+                            <div class="item cell-md-4">
+                                <img src="images/index-10-341x340.jpg" alt="" width="341" height="340" class="img-responsive reveal-inline-block"/>
+                                <h3 class="text-primary text-bold offset-top-22">Jessica Priston</h3>
+                                <h6 class="text-dark offset-top-5">tennis instructor</h6>
+                                <p class="divider-text divider-text-primary offset-top-22">Jessica was a member of the University of California tennis team in the 1990s.</p><a href="#" class="btn btn-default btn-sm offset-top-12 offset-sm-top-22">get in touch</a>
+                            </div>
+                            <div class="item cell-md-4">
+                                <img src="images/index-11-341x340.jpg" alt="" width="341" height="340" class="img-responsive reveal-inline-block"/>
+                                <h3 class="text-primary text-bold offset-top-22">Lawrence Larson</h3>
+                                <h6 class="text-dark offset-top-5">coach</h6>
+                                <p class="divider-text divider-text-primary offset-top-22">Lawrence Larson has been running the Tennis Academy since 2010.</p><a href="#" class="btn btn-default btn-sm offset-top-12 offset-sm-top-22">get in touch</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- RD Parallax-->
-            <section class="rd-parallax">
-                <div data-speed="0.3" data-type="media" data-url="images/index-12-1920x830.jpg" class="rd-parallax-layer"></div>
-
-                <div data-speed="0" data-type="html" class="rd-parallax-layer">
+            <section class="rd-parallax member-message" id="section9" style="background: url(images/index-12-1920x830.jpg) center center / cover;">
+                <div class="rd-parallax-layer">
                     <div class="section-lg-100 section-80 context-dark">
                         <div class="shell">
                             <h2>Testimonials</h2>
                             <hr class="divider divider-60 divider-primary offset-top-32">
                         </div>
-                        <!-- Owl Carousel-->
-                        <div style="position: static;" data-items="1" data-dots="true" data-nav="true" data-margin="30" data-mouse-drag="false" class="offset-top-60 owl-carousel-nav-position owl-carousel-navs owl-carousel custom-c-pag">
-                            <div class="shell">
-                                <div class="range range-xs-center">
-                                    <div class="cell-sm-3">
-                                        <img src="images/index-13-140x140.jpg" alt="" width="140" height="140" class="img-responsive center-block img-circle"/>
-                                        <h6 class="offset-top-22">Carl Smith</h6>
-                                        <p class="text-italic offset-top-3">Club member</p>
-                                    </div>
-                                    <div class="cell-sm-7 offset-top-12 offset-sm-top-0">
-                                        <div class="quote quote-lg inset-left-0 inset-right-0 text-sm-left">
-                                            <p>I highly recommend Tennis Club. The courts are of top quality and always readily available. Personally I enjoy the club nights held every Thursday evening. The cost of membership is also very reasonable.</p>
+
+                        <div class="offset-top-60 custom-c-pag message-content">
+                            <div class="item">
+                                <div class="shell">
+                                    <div class="range range-xs-center">
+                                        <div class="cell-sm-3">
+                                            <img src="images/index-13-140x140.jpg" alt="" width="140" height="140" class="img-responsive center-block img-circle"/>
+                                            <h6 class="offset-top-22">Carl Smith</h6>
+                                            <p class="text-italic offset-top-3">Club member</p>
+                                        </div>
+                                        <div class="cell-sm-7 offset-top-12 offset-sm-top-0">
+                                            <div class="quote quote-lg inset-left-0 inset-right-0 text-sm-left">
+                                                <p>I highly recommend Tennis Club. The courts are of top quality and always readily available. Personally I enjoy the club nights held every Thursday evening. The cost of membership is also very reasonable.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="shell">
-                                <div class="range range-xs-center">
-                                    <div class="cell-sm-3"><img src="images/index-13a-140x140.jpg" alt="" width="140" height="140" class="img-responsive center-block img-circle"/>
-                                        <h6 class="offset-top-22">Peter andrews</h6>
-                                        <p class="text-italic offset-top-3">Club member</p>
-                                    </div>
-                                    <div class="cell-sm-7 offset-top-12 offset-sm-top-0">
-                                        <div class="quote quote-lg inset-left-0 inset-right-0 text-sm-left">
-                                            <p>Tennis Club is a great place to play whatever your ability. There is something for those looking to compete in one of the teams, play socially at club night, or just play amongst friends.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="controls">
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section-80 section-md-110">
+            <section class="section-80 section-md-110" id="section10">
                 <div class="shell">
                     <h2>Upcoming Tournaments</h2>
                     <hr class="divider divider-60 divider-primary offset-top-32">
-                    <!-- Owl Carousel-->
-                    <div class="row text-md-left owl-dots-md offset-top-32 offset-md-top-60">
-                        <div class="col-md-4">
-                            <div class="gallery-item"><a href="event-single.html" class="reveal-inline-block"><img src="images/index-14-370x273.jpg" alt="" width="370" height="273" class="img-responsive reveal-inline-block"/></a></div>
-                            <h5 class="text-bold offset-top-8"><a href="#">San Diego International</a></h5>
-                            <p class="offset-top-8"><span class="text-middle icon fa fa-calendar-check-o text-gray icon-lg"></span><span class="text-middle inset-left-5">September 2-5</span></p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="gallery-item"><a href="event-single.html" class="reveal-inline-block"><img src="images/index-15-370x273.jpg" alt="" width="370" height="273" class="img-responsive reveal-inline-block"/></a></div>
-                            <h5 class="text-bold offset-top-8"><a href="#">Open Tennis Championship</a></h5>
-                            <p class="offset-top-8"><span class="text-middle icon fa fa-calendar-check-o text-gray icon-lg"></span><span class="text-middle inset-left-5">September 12-15</span></p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="gallery-item"><a href="event-single.html" class="reveal-inline-block"><img src="images/index-16-370x273.jpg" alt="" width="370" height="273" class="img-responsive reveal-inline-block"/></a></div>
-                            <h5 class="text-bold offset-top-8"><a href="#">South Tennis Tournament</a></h5>
-                            <p class="offset-top-8"><span class="text-middle icon fa fa-calendar-check-o text-gray icon-lg"></span><span class="text-middle inset-left-5">September 18-21</span></p>
+
+                    <div class="shell">
+                        <div class="range text-md-left offset-top-32 offset-md-top-60">
+                            <div class="cell-md-4">
+                                <div class="gallery-item">
+                                    <a href="event-single.html" class="reveal-inline-block">
+                                        <img src="images/index-14-370x273.jpg" alt="" width="370" height="273" class="img-responsive reveal-inline-block"/>
+                                    </a>
+                                </div>
+                                <h5 class="text-bold offset-top-8"><a href="#">San Diego International</a></h5>
+                                <p class="offset-top-8">
+                                    <span class="icon fa fa-calendar-check-o text-gray icon-lg"></span>
+                                    <span class="inset-left-5">September 2-5</span>
+                                </p>
+                            </div>
+                            <div class="cell-md-4">
+                                <div class="gallery-item">
+                                    <a href="event-single.html" class="reveal-inline-block">
+                                        <img src="images/index-15-370x273.jpg" alt="" width="370" height="273" class="img-responsive reveal-inline-block"/>
+                                    </a>
+                                </div>
+                                <h5 class="text-bold offset-top-8"><a href="#">Open Tennis Championship</a></h5>
+                                <p class="offset-top-8">
+                                    <span class="icon fa fa-calendar-check-o text-gray icon-lg"></span>
+                                    <span class="inset-left-5">September 12-15</span>
+                                </p>
+                            </div>
+                            <div class="cell-md-4">
+                                <div class="gallery-item">
+                                    <a href="event-single.html" class="reveal-inline-block">
+                                        <img src="images/index-16-370x273.jpg" alt="" width="370" height="273" class="img-responsive reveal-inline-block"/>
+                                    </a>
+                                </div>
+                                <h5 class="text-bold offset-top-8"><a href="#">South Tennis Tournament</a></h5>
+                                <p class="offset-top-8">
+                                    <span class="icon fa fa-calendar-check-o text-gray icon-lg"></span>
+                                    <span class="inset-left-5">September 18-21</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -490,7 +474,7 @@
                 </div>
             </section>
 
-            <section class="section-60 bg-primary">
+            <section class="section-60 bg-primary" id="section11">
                 <div class="shell">
                     <div class="range p">
                         <div class="cell-sm-4"><span class="fa fa-phone icon text-primary-light icon-xxl"></span>
@@ -586,8 +570,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/myscript.js"></script>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/core.min.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>

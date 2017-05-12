@@ -1,8 +1,23 @@
 exer1: ducnn giống bài cuongnd (cuongnd push trước)
 
-exer3:
-bachdb giống bài longdh (longdh push trước)
+exer1 + 2: Nhìn chung mọi người đều sữ dụng CSS
+
+exer3: bachdb giống bài longdh (longdh push trước)
+* samvq: ex1 va ex2 chưa căn giữa 1 số phần
+* bachdb + longdh: ex2 chưa căn giữa
+
+exer4: bachdb giống bài samvq exer4.3 
+* samvq: 1 số phần hình ảnh chưa tốt (ex4.3)
 
 
 
-trungtb, samvq, cuongnd chỉ có exer1
+bachbd       Bui Dinh Bach (ex1, ex2, ex3, ex4)
+cuongdm      Dang Manh Cuong (ex1, ex2, ex3, ex4)
+cuongnd      Nguyen Duc Cuong (ex1)
+ducnn        Nguyen Ngoc Duc (ex1, ex2, ex3)
+hoang.td     Tran Duc Hoang (ex1, ex2, ex3, ex4)
+samvq        Vu Quang Sam (ex1, ex2, ex3, ex4)
+
+longdh       Dang Hung Long (ex1, ex2, ex3)
+trungtb      Tong Bao Trung (ex1)
+tuanla       Luu Anh Tuan (ex1, ex2)
