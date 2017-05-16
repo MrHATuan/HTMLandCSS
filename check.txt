@@ -9,14 +9,17 @@ exer3: bachdb giống bài longdh (longdh push trước)
 exer4: bachdb giống bài samvq exer4.3 
 * samvq: 1 số phần hình ảnh chưa tốt (ex4.3)
 
+exer5: bachdb giống bài samvq exer5.2
+* hoang.td: phần text image header lỗi 
 
 
-bachbd       Bui Dinh Bach (ex1, ex2, ex3, ex4)
-cuongdm      Dang Manh Cuong (ex1, ex2, ex3, ex4)
+
+bachbd       Bui Dinh Bach (ex1, ex2, ex3, ex4, ex5)
+cuongdm      Dang Manh Cuong (ex1, ex2, ex3, ex4, ex5)
 cuongnd      Nguyen Duc Cuong (ex1)
 ducnn        Nguyen Ngoc Duc (ex1, ex2, ex3)
-hoang.td     Tran Duc Hoang (ex1, ex2, ex3, ex4)
-samvq        Vu Quang Sam (ex1, ex2, ex3, ex4)
+hoang.td     Tran Duc Hoang (ex1, ex2, ex3, ex4, ex5)
+samvq        Vu Quang Sam (ex1, ex2, ex3, ex4, ex5)
 
 longdh       Dang Hung Long (ex1, ex2, ex3)
 trungtb      Tong Bao Trung (ex1)
