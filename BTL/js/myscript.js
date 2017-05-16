@@ -48,6 +48,11 @@ $( document ).ready( function() {
             $("#icon-contacts").removeClass('active');
             $("#contacts").removeClass('active');
         }
+        if($(window).scrollTop() >= 500) {
+            $("#go-to-top").addClass('active')
+        } else {
+            $("#go-to-top").removeClass('active')
+        }
     });
 
     $("#menu span.rd-navbar-submenu-toggle").click(function(e) {
@@ -59,5 +64,10 @@ $( document ).ready( function() {
         }
     });
     // end
+
+    // Scroll Top
+    $("#go-to-top").click(function(event) {
+        $('html, body').animate({scrollTop: 0}, 500, 'linear');
+    });
 
 });

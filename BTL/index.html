@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="css/font/css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mystyle.css">
 </head>
 <body>
@@ -476,14 +475,14 @@
 
             <section class="section-60 bg-primary" id="section11">
                 <div class="shell">
-                    <div class="range p">
+                    <div class="range">
                         <div class="cell-sm-4"><span class="fa fa-phone icon text-primary-light icon-xxl"></span>
                             <h6 class="text-white offset-top-5">Telephones</h6>
                             <h5 class="offset-top-22 text-white"><a href="callto:#" class="text-white">1-800-1234-567</a><span class="reveal-block"><a href="callto:#" class="text-white">1-800-1234-567</a></span></h5>
                         </div>
                         <div class="cell-sm-4 offset-top-36 offset-sm-top-0"><span class="fa fa-map-marker icon text-primary-light icon-xxl"></span>
                             <h6 class="text-white offset-top-5">Address</h6>
-                            <h5 class="offset-top-22 text-white"><a href="#" class="text-white">2130 Fulton Street San Diego,<br class="veil reveal-lg-block">CA 94117-1080 USA</a></h5>
+                            <h5 class="offset-top-22 text-white"><a href="#" class="text-white">2130 Fulton Street San Diego,<br class="hidden reveal-lg-block">CA 94117-1080 USA</a></h5>
                         </div>
                         <div class="cell-sm-4 offset-top-36 offset-sm-top-0"><span class="fa fa-envelope-o icon text-primary-light icon-xxl"></span>
                             <h6 class="text-white offset-top-5">E-mail</h6>
@@ -497,7 +496,7 @@
         <!-- Page Footer-->
         <footer class="page-footer text-lg-left">
             <!-- RD Google Map-->
-            <div class="rd-google-map rd-google-map__model">
+            <div class="rd-google-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7448.654256671653!2d105.7874491587221!3d21.019592895413272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab54e2d4ae85%3A0x3f52c7a71ca22849!2sALT+PLUS+VIETNAM+COMPANY+LIMITED!5e0!3m2!1sen!2s!4v1474603069450" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
 
@@ -505,7 +504,7 @@
                 <div class="range text-md-left">
                     <div class="cell-lg-3 cell-md-4">
                         <a href="./" class="reveal-inline-block">
-                            <img src="images/brandF-246x48.png" alt="" width="246" height="48" class="img-responsive.reveal-inline-block"/>
+                            <img src="images/brandF-246x48.png" alt="" width="246" height="48" class="img-responsive reveal-inline-block"/>
                         </a>
                         <p class="offset-top-12 offset-lg-top-60">Our mission is to ensure our members enjoy a consistently excellent racquet sports experience. We offer an extensive range of tennis programs, a highly qualified team of certified tennis professionals, the best lighting in town, and ten newly resurfaced tennis courts. Our Club builds true leaders.</p>
                     </div>
@@ -527,7 +526,7 @@
 
                     <div class="cell-md-3 cell-lg-preffix-1 offset-top-42 offset-md-top-0">
                         <h6 class="text-gray">Flickr feed</h6>
-                        <div class="offset-top-26 gallery flickr">
+                        <div class="offset-top-26 gallery">
                             <div class="gallery-item flickr-item"><img src="images/flirkr-feed1.jpg" alt="" class="img-w"></div>
                             <div class="gallery-item flickr-item"><img src="images/flirkr-feed2.jpg" alt="" class="img-w"></div>
                             <div class="gallery-item flickr-item"><img src="images/flirkr-feed3.jpg" alt="" class="img-w"></div>
@@ -549,12 +548,15 @@
             </div>
         </footer>
 
+        <!-- scroll to top -->
+        <a href="#" id="go-to-top" class="ui-to-top fa fa-angle-up"></a>
+
         <!-- Modal-->
         <div id="myModal" role="dialog" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" data-dismiss="modal" class="close fa fa-times"></button>
+                        <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -570,8 +572,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/myscript.js"></script>
-    <!-- <script src="js/core.min.js"></script> -->
-    <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>
